@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     ReactiveFormsModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

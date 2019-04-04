@@ -2,15 +2,20 @@
   <div>
   <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
-      <input type="text" matInput placeholder="Enter Your name" ngModule name="name">
+      <input type="text" matInput placeholder="Enter Your name" ngModel name="name" #nameInput="ngModel" required>
+      <mat-error *ngIf="nameInput.hasError('required')">Field must not be empty</mat-error>
     </mat-form-field>
 
     <mat-form-field>
-      <input type="email" matInput placeholder="Enter Your email" ngModule name="email">
+      <input type="email" matInput placeholder="Enter Your email" ngModel name="email" required email #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid</mat-error>
     </mat-form-field>
 
-    <mat-form-field>
-      <input type="password" matInput placeholder="Enter Your password" ngModule name="password">
+    <mat-form-field hintLabel="Should be 6 character long">
+      <input type="password" matInput placeholder="Enter Your password" ngModel name="password" required #pwInput="ngModel" minlength="6">
+      <mat-hint align="end">{{pwInput.value?.length}} /6</mat-hint>
+      <mat-error *ngIf="pwInput.hasError('required')">Field must not be empty</mat-error>
     </mat-form-field>
 
     <!-- <mat-form-field>

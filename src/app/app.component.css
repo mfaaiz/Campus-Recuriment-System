@@ -1,3 +1,7 @@
+mat-sidenav-container{
+background-color:lightcyan;
+}
+
 mat-sidenav-container, mat-sidenave-content, mat-sidenav{
     height: 100%;
 }
