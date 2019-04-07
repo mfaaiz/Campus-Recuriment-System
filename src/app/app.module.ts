@@ -27,7 +27,7 @@ import { AdminComponent } from './admin/admin.component';
     SidenavListComponent,
     StudentComponent,
     CompanyComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

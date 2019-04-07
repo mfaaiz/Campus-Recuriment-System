@@ -1,3 +1,13 @@
 mat-form-field{
     width: 300px;
 }
+
+.sec
+{
+    background-image:url("../../../../src/assets/images/campus_recruitment.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:408px;
+    width: 100%;
+    opacity: 0.8;
+}

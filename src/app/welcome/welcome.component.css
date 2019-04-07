@@ -3,7 +3,18 @@
     background-image:url("../../assets/images/home.png");
     background-repeat: no-repeat;
     background-size:cover;
-    height: 500px;
+    height:408px;
     width: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
+}
+
+.text
+{
+    text-align: center;
+    position: relative;
+    top: 127px;
+    font-size:40px;
+    font-style:italic;
+    color: rgb(71, 71, 107);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
