@@ -1,0 +1,19 @@
+<!-- <p>
+  company-info works!
+</p> -->
+<mat-card color="primary" class="card-margin" >        
+  <mat-card-header>
+    <mat-card-title><h2>Personal Info</h2></mat-card-title>        
+  </mat-card-header>
+  <img md-card-image src="assets/images/company-image.png">
+  <mat-card-content>
+      <h3>{{(user$ | async)?.firstName}}</h3>
+  </mat-card-content>
+  <mat-card-actions>
+
+    <button md-button color="primary" [routerLink]="['post-job']">Post Jobs</button>
+    <button md-button color="primary" [routerLink]="['list-jobs']">My Posted Jobs</button>
+    <button md-button color="primary" [routerLink]="['student-list']">Students</button>
+    
+  </mat-card-actions>
+</mat-card>

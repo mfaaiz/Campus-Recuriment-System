@@ -1,0 +1,14 @@
+<!-- <p>
+  company works!
+</p> -->
+
+<mat-grid-list cols="5">
+    <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="red">
+       <app-company-info class="company-info-area"></app-company-info>
+     </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="2" [style.background-color]="blue">
+      <app-company-main class="company-main-area"></app-company-main>   
+    </mat-grid-tile>
+   <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="green">
+   </mat-grid-tile>
+   </mat-grid-list>

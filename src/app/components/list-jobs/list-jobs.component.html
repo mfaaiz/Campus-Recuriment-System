@@ -1,0 +1,22 @@
+<!-- <p>
+  list-jobs works!
+</p> -->
+<mat-card color="primary" class="card-margin" >        
+    <mat-card-header>
+        <mat-card-title><h2>Jobs</h2></mat-card-title>        
+      </mat-card-header>
+    <mat-list>
+      <div *ngFor="let job of jobs | async">
+        <mat-divider></mat-divider> 
+        <mat-list-item >
+          <h4 class="line-margin" md-line><b>Job Title: </b> {{job.jobTitle}}</h4>
+          <h4 class="line-margin" md-line><b>Salary: </b>{{job.salary}}</h4>
+          <p class="line-margin" md-line><b>Job Description: </b>{{job.jobDescription}} </p>
+          <button md-raised-button color="accent" class="app-button" [routerLink]="['../jobDetail']" (click)="viewDetail(job)">View</button>
+  
+          <button *ngIf="(user$ | async).accountType!=1" md-raised-button color="accent" (click)="deleteJob(job)" class="app-button">Delete</button>
+          
+        </mat-list-item>      
+      </div>
+    </mat-list>
+  </mat-card>

@@ -1,0 +1,13 @@
+<!-- <p>
+  admin works!
+</p> -->
+<mat-grid-list cols="5">
+    <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="red">
+       <app-admin-info class="admin-info-area"></app-admin-info>
+     </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="2" class="grid-tile" [style.background-color]="blue">
+      <app-admin-main class="admin-main-area"></app-admin-main>   
+    </mat-grid-tile>
+   <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="green">
+   </mat-grid-tile>
+   </mat-grid-list>

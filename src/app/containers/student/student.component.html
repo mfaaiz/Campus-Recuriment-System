@@ -1,0 +1,13 @@
+<!-- <p>
+  student works!
+</p> -->
+<mat-grid-list cols="5">
+    <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="red">
+       <app-student-info class="student-info-area"></app-student-info>
+     </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="2" [style.background-color]="blue">
+      <app-student-main class="student-main-area"></app-student-main>   
+    </mat-grid-tile>
+   <mat-grid-tile [colspan]="1" [rowspan]="2" [style.background-color]="green">
+   </mat-grid-tile>
+   </mat-grid-list>

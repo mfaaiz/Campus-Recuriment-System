@@ -1,0 +1,49 @@
+<!-- <p>
+  student-detail works!
+</p>-->
+<mat-card color="primary" class="card-margin" >        
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value);">
+        <mat-card-header>
+          <mat-card-title><h3>{{(user$ | async).firstName}}</h3></mat-card-title>        
+        </mat-card-header>
+        <mat-card-content>
+            <mat-input-container class="signup-input" >
+              <input mat-input id="firstName" placeholder="Full Name" type="text" [formControl]="myForm.controls['firstName']" >
+              <mat-hint *ngIf="myForm.controls['firstName'].touched && myForm.controls['firstName'].hasError('required')" 
+                          [ngStyle]="{'color': 'red'}" align="start">Required</mat-hint>
+            </mat-input-container>
+    
+            <mat-input-container class="signup-input" >
+              <input mat-input id="education" placeholder="Education" type="education" [formControl]="myForm.controls['education']" >
+              <mat-hint *ngIf="myForm.controls['education'].touched && myForm.controls['education'].hasError('required')" 
+                          [ngStyle]="{'color': 'red'}" align="start">Required</mat-hint>
+            </mat-input-container>
+    
+            <mat-input-container class="signup-input" >
+              <input mat-input id="gpa" placeholder="GPA" type="gpa" [formControl]="myForm.controls['gpa']" >
+              <mat-hint *ngIf="myForm.controls['gpa'].touched && myForm.controls['gpa'].hasError('required')" 
+                          [ngStyle]="{'color': 'red'}" align="start">Required</mat-hint>
+            </mat-input-container>
+    
+            <mat-input-container class="signup-input" >
+              <input mat-input id="skills" placeholder="Skills" type="skills" [formControl]="myForm.controls['skills']" >
+              <mat-hint *ngIf="myForm.controls['skills'].touched && myForm.controls['skills'].hasError('required')" 
+                          [ngStyle]="{'color': 'red'}" align="start">Required</mat-hint>
+            </mat-input-container>
+    
+            <mat-input-container class="signup-input" >
+              <input mat-input id="overview" placeholder="Overview" type="overview" [formControl]="myForm.controls['overview']" >
+              <mat-hint *ngIf="myForm.controls['overview'].touched && myForm.controls['overview'].hasError('required')" 
+                          [ngStyle]="{'color': 'red'}" align="start">Required</mat-hint>
+            </mat-input-container>
+    
+            
+            <div *ngIf="isError" [ngStyle]="{'color': 'red'}" align="start">
+                {{errorMessage}}
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Update</button>
+        </mat-card-actions>
+    </form>
+    </mat-card>

@@ -1,0 +1,19 @@
+<!-- <p>
+  admin-info works!
+</p>
+ -->
+ <mat-card color="primary" class="card-margin" >        
+  <mat-card-header>
+    <mat-card-title><h2>Personal Info</h2></mat-card-title>        
+  </mat-card-header>
+  <img md-card-image src="assets/images/admin-image.png">
+  <mat-card-content>
+      <h3>{{(user$ | async)?.firstName}}</h3>
+      
+  </mat-card-content>
+  <mat-card-actions>
+    <button md-button color="primary" [routerLink]="['student-list']">View All Students</button><br/>
+    <button md-button color="primary" [routerLink]="['list-jobs']">View All Jobs</button><br/>
+    <button md-button color="primary" [routerLink]="['company-list']">View All Companies</button>
+  </mat-card-actions>
+</mat-card>

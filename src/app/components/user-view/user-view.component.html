@@ -1,0 +1,28 @@
+<!-- <p>
+  user-view works!
+</p> -->
+<mat-card color="primary" class="card-margin" >        
+    <mat-card-header>
+        <mat-card-title><h2>{{user.firstName}}</h2></mat-card-title>        
+      </mat-card-header>
+    <mat-list>
+      <mat-list-item>
+          <h4 class="line-margin" mat-line>Email: {{user.email}}</h4>      
+        </mat-list-item>
+      <div *ngIf="user.accountType==1">
+        
+        <mat-list-item>
+          <h4 class="line-margin" mat-line>Education: {{user.education}}</h4>      
+        </mat-list-item>
+        <mat-list-item>
+          <h4 class="line-margin" mat-line>GPA: {{user.gpa}}</h4>      
+        </mat-list-item>
+        <mat-list-item>
+          <h4 class="line-margin" mat-line>Skills: {{user.skills}}</h4>      
+        </mat-list-item>
+        <mat-list-item>
+          <h4 class="line-margin" mat-line>Overview: {{user.overview}}</h4>      
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </mat-card>

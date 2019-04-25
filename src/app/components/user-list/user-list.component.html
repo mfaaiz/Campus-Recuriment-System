@@ -1,0 +1,18 @@
+<!-- <p>
+  user-list works!
+</p> -->
+<mat-card color="primary" class="card-margin" >        
+    <mat-card-header>
+        <mat-card-title><h2 *ngIf="(user$ | async)?.accountType==2">All Students</h2><h2 *ngIf="(user$ | async)?.accountType==1">All Companies</h2></mat-card-title>        
+      </mat-card-header>
+    <mat-list>
+      <div *ngFor="let user of users | async">
+        <mat-divider></mat-divider> 
+        <mat-list-item  >
+          <h2 class="line-margin" mat-line><b>Name: </b>{{user.firstName}}</h2>
+          <button mat-raised-button color="accent"  [routerLink]="['../userDetail']" (click)="viewDetail(user)" class="app-button">View</button>
+          <button mat-raised-button color="accent" *ngIf="(user$ | async)?.accountType==3"  (click)="deleteUser(user)" class="app-button">Delete</button>
+        </mat-list-item>
+        </div> 
+    </mat-list>
+  </mat-card>
