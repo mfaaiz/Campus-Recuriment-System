@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import {LoggedInGuard} from './providers/loggedin-guard';
+import {LoggedInGuard} from './providers/Loggedin-guard';
 
 import {  
     AdminComponent,

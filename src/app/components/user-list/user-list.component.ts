@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
-import { Router } from '@angular/router'
-import {Job} from '../../models'
+import {ActivatedRoute} from '@angular/router';
 import {User} from '../../models'
 import { Observable} from 'rxjs';
-import { IAppState,AuthActions } from '../../store';
-import { NgRedux, select } from 'ng2-redux';
-import { AngularFire, FirebaseListObservable } from 'angularfire';
+import {select } from 'ng2-redux';
+import { AngularFireDatabase } from '@angular/fire/database';
 import {StudentService} from '../../providers';
-import {CompanyService} from '../../providers';
-import {AdminService} from '../../providers';
 
 @Component({
   selector: 'app-user-list',
@@ -18,7 +13,7 @@ import {AdminService} from '../../providers';
 })
 export class UserListComponent implements OnInit {
 
-  users: FirebaseListObservable<any>;
+  users:any;
   @select(['auth','user']) user$ :Observable<any>;
   accountType: string;
   currentUrl : string;
@@ -28,7 +23,8 @@ export class UserListComponent implements OnInit {
       console.log("paht : ",url[0].path);
       this.currentUrl = url[0].path;
       if(this.currentUrl=="student-list"){
-        this.users = this.studentService.getUserList("1");
+        this.users=this.studentService.getUserList("1");
+        //this.users = this.studentService.getUserList("1");
       }
       else {
         this.users = this.studentService.getUserList("2");

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable} from 'rxjs';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import {AuthService} from '../../providers';
 import { Router } from '@angular/router';
 
